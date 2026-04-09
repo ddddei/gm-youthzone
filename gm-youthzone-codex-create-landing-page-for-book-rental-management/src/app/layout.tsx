@@ -1,10 +1,13 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "도서 대여 관리",
-  description: "도서 대여 관리 랜딩 페이지",
+  title: "GM YouthZone",
+  description: "광명시 청년동 홈페이지 데모",
 };
+
 
 export default function RootLayout({
   children,
@@ -13,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
